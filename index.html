@@ -1,13 +1,53 @@
 <center><h1>Prakhar Sharma</h1></center>
-<center><a href="mailto:prakhar03sharma@gmail.com">prakhar03sharma@gmail.com</a> | <a href="tel:9406886256">+91-9406886256</a> | <a href="https://github.com/prakharsr">Github</a> | <a href="https://www.linkedin.com/in/prakhar-sharma-733736175/">LinkedIn</a> | <a href="https://drive.google.com/file/d/1A68yyE7-3-JzRN0KDAVJ5UrZqsNFXzEG/view?usp=sharing">Resume</a></center>
+<center><a href="mailto:prakhar03sharma@gmail.com">prakhar03sharma@gmail.com</a> | <a href="tel:9027265188">+91-9027265188</a> | <a href="https://github.com/prakharsr">Github</a> | <a href="https://www.linkedin.com/in/prakhar-sharma-733736175/">LinkedIn</a> | <a href="https://drive.google.com/file/d/1A68yyE7-3-JzRN0KDAVJ5UrZqsNFXzEG/view?usp=sharing">Resume</a></center>
 <br>
 <p>Dear Recruiter, </p>
 <br>
 <p>
-    I am currently in my final year at IIITM Gwalior, completing my B.Tech + M.Tech integrated
-    course in Information Technology. I have a wide range of experience ranging from full stack
+    I am currently a Software Engineer at Sheru. I completed my B.Tech + M.Tech integrated
+    course in Information Technology from IIIT Gwalior. I have a wide range of experience ranging from full stack
     development, hybrid development, blockchain development, familiarity with Linux and
     basic kernel development.
+    <br>
+    I am working with Sheru from June 2021 to present as a Full Stack Engineer. My work experience in that duration is : 
+
+    ## Kafka - Product Owner
+
+ - Responsible for complete end to end implementation and deployment of a confluent kafka node with zookeeper, kafka server, schema-registry, kafka-rest, kafka-connect, ksqldb and control-center in AWS EC2 alongwith SSL and SASL in all of the components. Achieved max production and consumption throughput of 100 MBps while benchmarking
+ - Responsible for deployment of an InfluxDB node on an AWS EC2 server and rearchitecting data storage from earlier storing data in MongoDB and AWS S3 to using Kafka, Telegraf and InfluxDB to store time based IoT device data, microservice metric data and AWS EC2 node metric data
+ - Used MongoDB source and sink connectors and Google Firebase sink connectors to ingest/ egest data
+ - Responsible for creating and implementing solutions which made use of kafka in microservices leading to improved, scalable, reliable and robust architectures and increased message consumption throughput
+     - Collected metrics from each of the microservices and AWS EC2 instances and produced to kafka, consumed by telegraf and ingested by InfluxDB to generate alerts based on resource consumption and availability of microservices/ instances and to create dashboards in influxdb to monitor performance of APIs in microservices, track resource consumption, analysis layer for further optimizations
+     - Rearchitected the alerts microservice which used to consume change data from mongodb change streams and shifted it to consume from kafka topics, solving problems related to scalability, reliabiility, resuming consumption from where we left off, message consumption acknowledgement, low throughput due to a single consumer. With Kafka we were able to have parallel consumers in a topic using partitions to increase throughput of microservice using worker child processes in node. In order to further optimize and improve throughput, moved individual CRUD operations to a kafka topic which is consumed to do bulk operations in mongo and firebase. These optimizations led to a 1000x increase in consumption throughput and lower costs needed for storage (in kafka partitions), CPU and memory resources
+     - Rearchitected the asset and telemetry microservice from doing create/ update operations in mongo and firebase to producing to a topic in kafka, solving problem of scalability and led to a huge increase in production throughput and lower costs needed for CPU and memory resources
+    - In order to solve the problem of scalability with APIs, created a reusable class which utlized kafka by and used parent and child process and nodejs event emitters to increase throughput by parallel consumption, solving problems related to scalability, reliabiility, resuming consumption from where we left off, message consumption acknowledgement
+
+## Microservice related tasks
+
+ - Created and integrated kafka based solutions which made use of kafka in microservices leading to improved, scalable, reliable and robust architectures and increased message consumption throughput
+
+ - Rearchitected the orchestration platform to solve the problem of scalability and adaptability to changes in hierarchy of organisation
+
+ - Made parsers for different types of IoTs across different Battery Management Systems, deploying RabbitMQ and using it as message queue
+
+ - Created metrics related to asset telemetry which help suggest the best reliable hardware/ manufacturer suitable for us alongiwth optimizations in internal socket handling in node
+
+ - Changed architecture of battery swapping workflow from using agenda.js for dynamic jobs to using this kafka architecture and mongodb transactions to achieve guarantess, finality and robustness
+
+ - Responsible for designing and creating the Kilometer Estimation microservice from scratch to completion for predicting kms with accuracy using gps and soc data of a battery utilizing influxdb to get geolocation and battery data and writing APIs in typescript
+
+ - Responsible for designing and creating a microservice  for creating cron jobs using agenda.js which is used to automate various workflows and to query health of microservices and generate alerts
+
+ - React Dashboard Backend And Frontend - Responsible for designing the architecture of backend of a nodejs react app utilizing appolo graphql, responsible for creation of shell script for remote deployment and designing a build process for compressing the app using brotli, leading to very fast website, responsible for creating web pages to accomplish various tasks using react.js
+
+## Deployments, Shell Scripting and data migrations -
+
+- Created shell scripts for replication of influxdb data across EC2 servers, automatic weekly updation of OSRM data using scripts for automated EC2 creation/ deletion, automated build and deployment of react apps, created various daemons to solved availability related issues etc.
+ - Creation of a fully secure node from a baremetal VM in E2E networks
+ - Nginx deployment alongwith certbot, load balancing 
+ - Responsible for creation of scripts for migration of old data stored in AWS S3, validating and modifying it to use new schema, while utilizing kafka and telegraf for parallel ingestion
+
+
     <br>
     I interned with Sheru from June to September 2020 as a Django Developer. It involved the
     development of an admin dashboard for analyzing the business architecture from the
